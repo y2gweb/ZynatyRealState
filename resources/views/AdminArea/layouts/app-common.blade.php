@@ -16,7 +16,7 @@
     <!-- Favicons -->
     <link href="{{asset('PublicArea/img/faveicon2.png')}}" rel="icon">
     <link rel="shortcut icon" href="{{asset('PublicArea/img/faveicon2.png')}}" type="image">
-    <title>Earth 2-Admin </title>
+    <title> Admin </title>
     <!-- Favicon -->
   
     @include('AdminArea/includes.css')
