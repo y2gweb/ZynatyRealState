@@ -21,8 +21,7 @@
                 </div>
                 <div class="col-lg-6 col-5 text-right">
 
-                    <a href="{{ route('register')}}" class="btn btn-sm btn-info"><i class="ni ni-fat-add"></i>Create
-                        New Admin</a>
+                    <a href="{{ route('register')}}" class="btn btn-sm btn-info"><i class="ni ni-fat-add"></i>Add New</a>
                 </div>
             </div>
         </div>
