@@ -19,6 +19,10 @@
   <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/select2-bootstrap-theme/0.1.0-beta.10/select2-bootstrap.min.css">
 
+      <link href="{{ asset('img/dist/image-uploader.min.css') }}" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/css/dropify.css">
+    
+
       <style>
 
 

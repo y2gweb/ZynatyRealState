@@ -44,42 +44,42 @@ return [
     'disks' => [
 
         'local' => [
-            'driver' => 'local',
-            'root' => storage_path('app'),
+        'driver' => 'local',
+        'root' => storage_path('app'),
         ],
 
         'public' => [
-            'driver' => 'local',
-            'root' => storage_path('app/public'),
-            'url' => env('APP_URL').'/storage',
-            'visibility' => 'public',
+        'driver' => 'local',
+        'root' => storage_path('app/public'),
+        'url' => env('APP_URL') . '/storage',
+        'visibility' => 'public',
         ],
 
         's3' => [
-            'driver' => 's3',
-            'key' => env('AWS_ACCESS_KEY_ID'),
-            'secret' => env('AWS_SECRET_ACCESS_KEY'),
-            'region' => env('AWS_DEFAULT_REGION'),
-            'bucket' => env('AWS_BUCKET'),
-            'url' => env('AWS_URL'),
-            'endpoint' => env('AWS_ENDPOINT'),
+        'driver' => 's3',
+        'key' => env('AWS_ACCESS_KEY_ID'),
+        'secret' => env('AWS_SECRET_ACCESS_KEY'),
+        'region' => env('AWS_DEFAULT_REGION'),
+        'bucket' => env('AWS_BUCKET'),
+        'url' => env('AWS_URL'),
         ],
 
-    ],
+        'template-temp-path' => [
+        'driver' => 'local',
+        'root' => env("TEMPLATE_TEMP_AREA", public_path('templates-temp-area/')),
+        'visibility' => 'public',
+        ],
 
-    /*
-    |--------------------------------------------------------------------------
-    | Symbolic Links
-    |--------------------------------------------------------------------------
-    |
-    | Here you may configure the symbolic links that will be created when the
-    | `storage:link` Artisan command is executed. The array keys should be
-    | the locations of the links and the values should be their targets.
-    |
-    */
+        'template-default-path' => [
+        'driver' => 'local',
+        'root' => resource_path('dynamic-template/'),
+        'visibility' => 'public',
+        ],
 
-    'links' => [
-        public_path('storage') => storage_path('app/public'),
-    ],
+        ],
+
+        'public_site_public_area' => env('PUBLIC_SITE_PUBLIC_AREA', '/var/www/bc-stores-laravel-public-sites/public/theme_data/'),
+        'public_site_resources_area' => env('PUBLIC_SITE_RESOURCES_AREA', '/var/www/bc-stores-laravel-public-sites/resources/views/Themes/'),
+
 
 ];
